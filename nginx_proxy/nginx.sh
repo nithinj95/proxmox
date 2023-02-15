@@ -22,7 +22,7 @@ echo "############################configure nginx###############################
 mv  /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bkp
 rm -f /etc/nginx/sites-enabled/default
 
-wget http://ltbg-el-bkp/nithin_scrips/nginx_proxy/proxmox.conf -P /etc/nginx/conf.d
+wget -N http://ltbg-el-bkp/nithin_scrips/nginx_proxy/proxmox.conf -P /etc/nginx/conf.d
 upstream="$(hostname -f)"
 echo "$upstream"
 sed -i "s/HOSTNAME/$upstream/g" /etc/nginx/conf.d/proxmox.conf
