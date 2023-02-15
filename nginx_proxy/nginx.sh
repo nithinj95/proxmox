@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 #check if nginx is installed or not
 /etc/init.d/nginx status
